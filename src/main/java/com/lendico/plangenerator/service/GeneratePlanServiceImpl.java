@@ -51,6 +51,9 @@ public class GeneratePlanServiceImpl implements GeneratePlanService {
 
             // Get Principal
             BigDecimal principal = formula.calculatePrincipal(annuity, interest);
+            if(principal.compareTo(outstandingLoan) > 0) {
+                principal = outstandingLoan;
+            }
 
             // Get borrower payment
             BigDecimal borrowPayment = formula.calculateBorrowerPayment(principal, interest);
