@@ -25,7 +25,7 @@ public class GeneratePlanServiceImplTest {
     @Test
     public void test_generate_plan() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2018, 0, 1);
+        calendar.set(2018, Calendar.JANUARY, 1);
 
         RepaymentDto repaymentDto = new RepaymentDto();
         repaymentDto.setDuration(24);
@@ -98,7 +98,7 @@ public class GeneratePlanServiceImplTest {
     @Test
     public void test_generate_plan_loan_amount_exception() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2018, 0, 1);
+        calendar.set(2018, Calendar.JANUARY, 1);
 
         RepaymentDto repaymentDto = new RepaymentDto();
         repaymentDto.setDuration(24);
@@ -113,7 +113,7 @@ public class GeneratePlanServiceImplTest {
     @Test
     public void test_generate_plan_duration_exception() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2018, 0, 1);
+        calendar.set(2018, Calendar.JANUARY, 1);
 
         RepaymentDto repaymentDto = new RepaymentDto();
         repaymentDto.setDuration(0);

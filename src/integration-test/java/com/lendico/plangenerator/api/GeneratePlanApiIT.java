@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
@@ -24,13 +23,13 @@ public class GeneratePlanApiIT {
     @Autowired
     private MockMvc mockMvc;
 
-    private ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
     public void should_post_payload_and_get_response() throws Exception {
         // Given
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2018, 0, 1);
+        calendar.set(2018, Calendar.JANUARY, 1);
 
         RepaymentDto repaymentDto = new RepaymentDto();
         repaymentDto.setDuration(24);

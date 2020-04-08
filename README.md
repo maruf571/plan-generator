@@ -17,7 +17,7 @@ $ mvn spring-boot:run
  
 
 ## How to run test 
-On this project, there are  unit and intehration test. Integration test is time consuming test. 
+On this project, there are  unit and integration test. Integration test is time consuming test. 
 I am using `it` profile for integration test. 
 It is possible to run unit and integration alone. Please follow the instruction bellow.
  Maven lifecycle may help to understand the test and verify phase.   

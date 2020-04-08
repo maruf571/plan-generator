@@ -1,6 +1,5 @@
 package com.lendico.plangenerator.api;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.lendico.plangenerator.dto.PlanWrapper;
 import com.lendico.plangenerator.dto.RepaymentDto;
 import com.lendico.plangenerator.service.GeneratePlanService;
@@ -24,7 +23,7 @@ public class GeneratePlanApi {
     private final GeneratePlanService generatePlanService;
 
     @PostMapping
-    public ResponseEntity<PlanWrapper> generatePlanDto(@RequestBody @Valid final RepaymentDto repaymentDto) throws JsonProcessingException {
+    public ResponseEntity<PlanWrapper> generatePlanDto(@RequestBody @Valid final RepaymentDto repaymentDto){
         return ResponseEntity.ok(generatePlanService.generatePlan(repaymentDto));
     }
 }
