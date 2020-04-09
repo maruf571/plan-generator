@@ -18,6 +18,6 @@ public class RestExceptionHandler {
                 .message(ex.getMessage())
                 .details(request.getDescription(false))
                 .build();
-        return new ResponseEntity<>(exceptionDto, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(exceptionDto, HttpStatus.BAD_REQUEST);
     }
 }
