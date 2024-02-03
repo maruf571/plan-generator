@@ -1,5 +1,7 @@
-package com.lendico.plangenerator.exception;
+package com.lendico.plangenerator.exception.handler;
 
+import com.lendico.plangenerator.exception.ExceptionDto;
+import com.lendico.plangenerator.exception.PlanGeneratorException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

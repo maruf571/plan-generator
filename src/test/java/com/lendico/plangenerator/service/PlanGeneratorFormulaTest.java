@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-public class PlanGeneratorFormulaImplTest {
+public class PlanGeneratorFormulaTest {
 
     private static PlanGeneratorFormula formula;
 
     @BeforeAll
     public static void init() {
-        formula = new PlanGeneratorFormulaImpl();
+        formula = new PlanGeneratorFormula();
     }
 
     @Test

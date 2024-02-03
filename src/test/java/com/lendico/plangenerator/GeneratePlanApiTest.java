@@ -1,6 +1,7 @@
-package com.lendico.plangenerator.api;
+package com.lendico.plangenerator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lendico.plangenerator.controller.GeneratePlanApi;
 import com.lendico.plangenerator.dto.RepaymentDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,17 +9,17 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class GeneratePlanApiIT {
+public class GeneratePlanApiTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -39,7 +40,7 @@ public class GeneratePlanApiIT {
 
 
         // Then
-         this.mockMvc.perform(post(GeneratePlanApi.GENERATE_PLAN_API)
+         this.mockMvc.perform(MockMvcRequestBuilders.post(GeneratePlanApi.GENERATE_PLAN_API)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(getObjectAsString(repaymentDto))
          )

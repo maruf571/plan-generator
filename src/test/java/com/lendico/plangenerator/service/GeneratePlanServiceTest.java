@@ -11,15 +11,15 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.Calendar;
 
-public class GeneratePlanServiceImplTest {
+public class GeneratePlanServiceTest {
 
     private static GeneratePlanService generatePlanService;
 
     @BeforeAll
     public static void init() {
-        PlanGeneratorFormula formula = new PlanGeneratorFormulaImpl();
+        PlanGeneratorFormula formula = new PlanGeneratorFormula();
         RepaymentValidator validator = new RepaymentValidator();
-        generatePlanService = new GeneratePlanServiceImpl(formula, validator);
+        generatePlanService = new GeneratePlanService(formula, validator);
     }
 
     @Test
