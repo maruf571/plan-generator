@@ -1,4 +1,9 @@
 # Plan Generator
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maruf571_plan-generator&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=maruf571_plan-generator)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=maruf571_plan-generator&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=maruf571_plan-generator)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=maruf571_plan-generator&metric=bugs)](https://sonarcloud.io/summary/new_code?id=maruf571_plan-generator)
+
+
 This project is a simple loan plan generator. 
 
 ## Tech spec
@@ -33,7 +38,7 @@ run
 $ docker run -p 7070:8080 -t lendico/plan-generator
 ```
 
-## API
+## Usage
 Sample request
 ```
 POST http://localhost:7070/generate-plan

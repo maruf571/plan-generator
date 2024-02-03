@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.Calendar;
 
-public class GeneratePlanServiceTest {
+class GeneratePlanServiceTest {
 
     private static GeneratePlanService generatePlanService;
 
@@ -23,7 +23,7 @@ public class GeneratePlanServiceTest {
     }
 
     @Test
-    public void test_generate_plan() {
+    void test_generate_plan() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2018, Calendar.JANUARY, 1);
 
@@ -96,7 +96,7 @@ public class GeneratePlanServiceTest {
     }
 
     @Test
-    public void test_generate_plan_loan_amount_exception() {
+    void test_generate_plan_loan_amount_exception() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2018, Calendar.JANUARY, 1);
 
@@ -111,7 +111,7 @@ public class GeneratePlanServiceTest {
     }
 
     @Test
-    public void test_generate_plan_duration_exception() {
+    void test_generate_plan_duration_exception() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2018, Calendar.JANUARY, 1);
 

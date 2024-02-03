@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-public class PlanGeneratorFormulaTest {
+class PlanGeneratorFormulaTest {
 
     private static PlanGeneratorFormula formula;
 
@@ -16,7 +16,7 @@ public class PlanGeneratorFormulaTest {
     }
 
     @Test
-    public void test_interest_calculation() {
+    void test_interest_calculation() {
 
         BigDecimal interest = formula.calculateInterest(
                 BigDecimal.valueOf(5),
@@ -28,19 +28,19 @@ public class PlanGeneratorFormulaTest {
     }
 
     @Test
-    public void test_calculate_principal() {
+    void test_calculate_principal() {
         BigDecimal principal = formula.calculatePrincipal(BigDecimal.valueOf(219.36), BigDecimal.valueOf(20.83));
         Assertions.assertEquals(BigDecimal.valueOf(198.53), principal);
     }
 
     @Test
-    public void test_calculate_borrower_payment() {
+    void test_calculate_borrower_payment() {
         BigDecimal bp = formula.calculateBorrowerPayment(BigDecimal.valueOf(198.53), BigDecimal.valueOf(20.83));
         Assertions.assertEquals(BigDecimal.valueOf(219.36), bp);
     }
 
     @Test
-    public void test_calculate_annuity() {
+    void test_calculate_annuity() {
         BigDecimal annuity = formula.calculateAnnuity(BigDecimal.valueOf(5), 24, BigDecimal.valueOf(5000));
         Assertions.assertEquals(BigDecimal.valueOf(219.36), annuity);
     }

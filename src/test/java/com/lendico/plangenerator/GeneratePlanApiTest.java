@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class GeneratePlanApiTest {
+class GeneratePlanApiTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -27,7 +27,7 @@ public class GeneratePlanApiTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
-    public void should_post_payload_and_get_response() throws Exception {
+    void should_post_payload_and_get_response() throws Exception {
         // Given
         Calendar calendar = Calendar.getInstance();
         calendar.set(2018, Calendar.JANUARY, 1);
